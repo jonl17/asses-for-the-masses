@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "paths": {
+      "@cmp/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@store/*": ["src/store/*"],
+      "@prismic/*": ["src/prismic/*"],
+      "@styles/*": ["src/styles/*"],
+      "@types": ["src/types.ts"],
+      "@utils": ["src/utils.ts"]
+    }
+  },
+  "exclude": ["node_modules", "public"]
+}

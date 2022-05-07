@@ -1,3 +1,10 @@
+require('ts-node').register()
+
+const {
+  gatsbySourcePrismic,
+  gatsbySourcePrismicPreviews,
+} = require('./src/prismic/config')
+
 const aliasImports = {
   resolve: 'gatsby-plugin-alias-imports',
   options: {
@@ -28,5 +35,7 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    gatsbySourcePrismic,
+    gatsbySourcePrismicPreviews,
   ],
 }

@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'ass-gradient':
-          'linear-gradient(180deg, #EA75E2 0%, #639DC7 21.88%, #E9E9E9 73.96%, #EA75E2 100%);',
+          'linear-gradient(180deg, #EA75E2 0%, #639DC7 21.88%, #A3E9FF 73.96%, #EA75E2 100%);',
       },
       backgroundSize: {
         'bg-zoom': '300% 400%',
