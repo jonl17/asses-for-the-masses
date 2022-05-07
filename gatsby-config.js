@@ -37,5 +37,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     gatsbySourcePrismic,
     gatsbySourcePrismicPreviews,
+    'gatsby-plugin-react-helmet',
   ],
 }

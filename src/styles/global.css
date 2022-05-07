@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+
+@layer base {
+  @font-face {
+    font-family: 'Fat Ass';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/FATASSFI.TTF'), format('truetype');
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-fatAss;
+  }
+
+  h1 {
+    @apply text-headingMobile lg:text-heading;
+  }
+
+  p,
+  a,
+  span {
+    @apply font-galindo;
+    @apply text-paragMobile lg:text-parag;
+  }
+}
+
+@layer utilities {
+  .rich-text p,
+  h1 {
+    @apply mb-5;
+  }
+}

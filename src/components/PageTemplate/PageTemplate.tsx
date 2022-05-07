@@ -12,7 +12,7 @@ type Props = {
 const PageTemplate: React.FC<Props> = ({ data }) => {
   const page = pageResolver(data.prismicPage)
   return (
-    <div>
+    <div className='h-full min-h-screen w-full bg-ass-gradient bg-bg-zoom animate-move-bg '>
       {page.body.map((slice, key) => (
         <SliceMapper slice={slice} key={key} />
       ))}

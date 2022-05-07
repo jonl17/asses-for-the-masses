@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -28,7 +30,19 @@ module.exports = {
         'slide-in-right': 'slideInRight 1s 1s forwards',
         'move-bg': 'moveBg 35s infinite alternate',
       },
+      fontFamily: {
+        galindo: ['Galindo', 'cursive'],
+        fatAss: ['Fat Ass', 'cursive'],
+      },
+      fontSize: {
+        parag: '23px',
+        paragMobile: '16px',
+        heading: '60px',
+        headingMobile: '33px',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities, addComponents, e, prefix, config }) {}),
+  ],
 }

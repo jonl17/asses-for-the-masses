@@ -12,6 +12,9 @@ export const fragment = graphql`
         ... on PrismicPageDataBodyHero {
           ...heroFragment
         }
+        ... on PrismicPageDataBodyFeature {
+          ...featureFragment
+        }
       }
     }
   }
@@ -19,5 +22,20 @@ export const fragment = graphql`
   fragment heroFragment on PrismicPageDataBodyHero {
     id
     slice_type
+  }
+
+  fragment featureFragment on PrismicPageDataBodyFeature {
+    id
+    slice_type
+    primary {
+      image {
+        url
+        alt
+        gatsbyImageData
+      }
+      text {
+        html
+      }
+    }
   }
 `
