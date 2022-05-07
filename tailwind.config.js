@@ -3,7 +3,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-pink': 'linear-gradient(180deg, #EA75E2 0%, #639DC7 100%);',
+        'ass-gradient':
+          'linear-gradient(180deg, #EA75E2 0%, #639DC7 21.88%, #E9E9E9 73.96%, #EA75E2 100%);',
+      },
+      backgroundSize: {
+        'bg-zoom': '300% 400%',
       },
       keyframes: {
         slideInLeft: {
@@ -14,10 +18,15 @@ module.exports = {
           from: { transform: 'translateX(100%)' },
           to: { transform: 'translateX(0)' },
         },
+        moveBg: {
+          from: { backgroundPosition: '0 0' },
+          to: { backgroundPosition: '-100% 100%' },
+        },
       },
       animation: {
         'slide-in-left': 'slideInLeft 1s 0s forwards',
         'slide-in-right': 'slideInRight 1s 1s forwards',
+        'move-bg': 'moveBg 35s infinite alternate',
       },
     },
   },
