@@ -8,7 +8,7 @@ const Contact = () => {
       <a target='_blank' href='https://twitter.com/assesforthemas1'>
         <Twitter />
       </a>
-      <a target='_blank' href='discord.gg/d2m3emHPTG'>
+      <a target='_blank' href='https://discord.gg/d2m3emHPTG'>
         <Discord />
       </a>
     </div>

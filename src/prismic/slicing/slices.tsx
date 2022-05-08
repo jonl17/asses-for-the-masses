@@ -12,6 +12,8 @@ const slices = (slice: ISlice) => {
       const props: IFeature = {
         image: slice.primary.image,
         text: slice.primary.text,
+        video: slice.primary.video,
+        imageLeft: slice.slice_label === 'image_left',
       }
       return <Feature {...props} />
     }

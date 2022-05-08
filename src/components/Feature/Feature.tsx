@@ -10,7 +10,7 @@ interface IMedia {
 }
 
 const Media = ({ image, video }: IMedia) => {
-  if (video) {
+  if (video && video.url) {
     return <video></video>
   }
   return (
@@ -28,16 +28,19 @@ export interface IFeature {
   text: {
     html: string
   }
+  video?: {
+    url: string
+  }
   imageLeft?: boolean
 }
 
-const Feature = ({ image, text, imageLeft = false }: IFeature) => {
+const Feature = ({ image, text, video, imageLeft = false }: IFeature) => {
   return (
     <>
       {/* mobile below */}
       <section className='lg:hidden container mx-auto pb-16 px-5'>
         <div>
-          <Media image={image} />
+          <Media image={image} video={video} />
           <div
             className='rich-text mt-5'
             dangerouslySetInnerHTML={{ __html: text.html }}
@@ -47,8 +50,8 @@ const Feature = ({ image, text, imageLeft = false }: IFeature) => {
       {/* desktop below */}
       <section className='hidden lg:grid grid-cols-5 container mx-auto pb-36'>
         {imageLeft && (
-          <div className='w-auto col-span-2'>
-            <Media image={image} />
+          <div className='w-auto col-span-2 h-[450px]'>
+            <Media image={image} video={video} />
           </div>
         )}
         <div
@@ -59,8 +62,8 @@ const Feature = ({ image, text, imageLeft = false }: IFeature) => {
           dangerouslySetInnerHTML={{ __html: text.html }}
         />
         {!imageLeft && (
-          <div className='w-auto col-span-2'>
-            <Media image={image} />
+          <div className='w-auto col-span-2 h-[450px]'>
+            <Media image={image} video={video} />
           </div>
         )}
       </section>

@@ -27,6 +27,7 @@ export const fragment = graphql`
   fragment featureFragment on PrismicPageDataBodyFeature {
     id
     slice_type
+    slice_label
     primary {
       image {
         url
@@ -35,6 +36,9 @@ export const fragment = graphql`
       }
       text {
         html
+      }
+      video {
+        url
       }
     }
   }
