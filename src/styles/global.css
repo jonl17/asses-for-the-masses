@@ -7,8 +7,6 @@
 @layer base {
   @font-face {
     font-family: 'Fat Ass';
-    font-style: normal;
-    font-weight: normal;
     src: url('/FATASSFI.TTF'), format('truetype');
   }
 
@@ -18,7 +16,11 @@
   h4,
   h5,
   h6 {
-    @apply font-fatAss;
+    @apply font-galindo;
+    @apply text-black;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
   }
 
   h1 {
