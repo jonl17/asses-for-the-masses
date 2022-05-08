@@ -15,7 +15,7 @@ const Media = ({ image, video }: IMedia) => {
   }
   return (
     <GatsbyImage
-      className='w-full h-full'
+      className='w-auto h-full'
       image={image.gatsbyImageData}
       alt={image.alt}
       objectFit='contain'
@@ -50,7 +50,7 @@ const Feature = ({ image, text, video, imageLeft = false }: IFeature) => {
       {/* desktop below */}
       <section className='hidden lg:grid grid-cols-5 container mx-auto pb-36'>
         {imageLeft && (
-          <div className='w-auto col-span-2 h-[450px]'>
+          <div className='w-auto col-span-2 h-[500px]'>
             <Media image={image} video={video} />
           </div>
         )}
@@ -62,7 +62,7 @@ const Feature = ({ image, text, video, imageLeft = false }: IFeature) => {
           dangerouslySetInnerHTML={{ __html: text.html }}
         />
         {!imageLeft && (
-          <div className='w-auto col-span-2 h-[450px]'>
+          <div className='w-auto col-span-2 h-[500px] flex justify-end'>
             <Media image={image} video={video} />
           </div>
         )}
